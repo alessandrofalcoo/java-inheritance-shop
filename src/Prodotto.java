@@ -7,10 +7,12 @@ public class Prodotto {
     protected BigDecimal price;
     protected int iva = 22;
 
-    public Prodotto(String name, String brand, BigDecimal price) {
+    public Prodotto(int code, String name, String brand, BigDecimal price, int iva) {
+        this.code = code;
         this.name = name;
         this.brand = brand;
         this.price = price;
+        this.iva = iva;
     }
 
     public int getCode() {
