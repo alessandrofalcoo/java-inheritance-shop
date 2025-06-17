@@ -1,3 +1,5 @@
+package org.lesson.shop;
+
 import java.math.BigDecimal;
 
 public class Cuffie extends Prodotto {
