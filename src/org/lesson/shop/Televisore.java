@@ -12,4 +12,14 @@ public class Televisore extends Prodotto {
         this.dimensions = dimensions;
         this.isSmart = isSmart;
     }
+
+    public BigDecimal discoutedTV() {
+        if (!isSmart) {
+            BigDecimal sconto = price.multiply(new BigDecimal("0.10"));
+            BigDecimal totale = price.subtract(sconto);
+            return totale;
+        } else {
+            return price;
+        }
+    }
 }
