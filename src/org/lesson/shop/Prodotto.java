@@ -8,6 +8,7 @@ public class Prodotto {
     protected String brand;
     protected BigDecimal price;
     protected int iva = 22;
+    protected boolean isCard = false;
 
     public Prodotto(int code, String name, String brand, BigDecimal price) {
         this.code = code;
@@ -15,6 +16,16 @@ public class Prodotto {
         this.brand = brand;
         this.price = price;
 
+    }
+
+    public BigDecimal discountedPrice() {
+        if (isCard) {
+            BigDecimal sconto = price.multiply(new BigDecimal("0.02"));
+            BigDecimal totale = price.subtract(sconto);
+            return totale;
+        } else {
+            return price;
+        }
     }
 
     public int getCode() {
