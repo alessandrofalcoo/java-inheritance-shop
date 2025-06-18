@@ -52,4 +52,13 @@ public class Prodotto {
     public void setIva(int iva) {
         this.iva = iva;
     }
+
+    @Override
+    public String toString() {
+        return "Prodotto: \n " +
+                "Nome: " + name + "\n" +
+                "Marca: " + brand + "\n" +
+                "Prezzo: " + price + "\n";
+
+    }
 }
