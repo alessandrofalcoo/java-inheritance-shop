@@ -69,7 +69,8 @@ public class Prodotto {
         return "Prodotto: \n " +
                 "Nome: " + name + "\n" +
                 "Marca: " + brand + "\n" +
-                "Prezzo: " + price + "\n";
+                "Prezzo: " + price + "\n" +
+                "Prezzo scontato: " + discountedPrice() + "\n";
 
     }
 }

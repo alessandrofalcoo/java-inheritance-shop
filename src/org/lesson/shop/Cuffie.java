@@ -19,7 +19,9 @@ public class Cuffie extends Prodotto {
             BigDecimal totale = price.subtract(sconto);
             return totale;
         } else {
-            return price;
+            BigDecimal sconto = price.multiply(new BigDecimal("0.02"));
+            BigDecimal totale = price.subtract(sconto);
+            return totale;
         }
     }
 }
