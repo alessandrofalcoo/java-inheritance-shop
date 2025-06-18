@@ -12,6 +12,10 @@ public class Carrello {
 
         scanner.nextLine();
 
+        System.out.println("Possiedi la carta fedeltá? (s/n): ");
+        String risposta = scanner.nextLine();
+        boolean isCard = risposta.equalsIgnoreCase("s");
+
         Prodotto[] carrello = new Prodotto[n];
         for (int i = 0; i < n; i++) {
             System.out.println("Prodotto #" + (i + 1));
@@ -23,7 +27,7 @@ public class Carrello {
             BigDecimal prezzo = scanner.nextBigDecimal();
             scanner.nextLine();
 
-            carrello[i] = new Prodotto(i, nome, marca, prezzo);
+            carrello[i] = new Prodotto(i, nome, marca, prezzo, isCard);
         }
 
         System.out.println("Prodotti inseriti nel carrello:");

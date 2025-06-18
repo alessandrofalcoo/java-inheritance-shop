@@ -8,14 +8,14 @@ public class Prodotto {
     protected String brand;
     protected BigDecimal price;
     protected int iva = 22;
-    protected boolean isCard = false;
+    protected boolean isCard;
 
-    public Prodotto(int code, String name, String brand, BigDecimal price) {
+    public Prodotto(int code, String name, String brand, BigDecimal price, boolean isCard) {
         this.code = code;
         this.name = name;
         this.brand = brand;
         this.price = price;
-
+        this.isCard = isCard;
     }
 
     public BigDecimal discountedPrice() {
