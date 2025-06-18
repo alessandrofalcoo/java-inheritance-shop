@@ -11,4 +11,14 @@ public class Cuffie extends Prodotto {
         this.color = color;
         this.isWired = isWired;
     }
+
+    public BigDecimal discoutedCuffie() {
+        if (isWired) {
+            BigDecimal sconto = price.multiply(new BigDecimal("0.07"));
+            BigDecimal totale = price.subtract(sconto);
+            return totale;
+        } else {
+            return price;
+        }
+    }
 }
